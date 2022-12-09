@@ -621,3 +621,16 @@ section{
     }
 
 }
+
+/*responsive*/
+
+@media(max-width: 767px){
+	.portfolio .service-items .item{
+	  flex:0 0 100%;
+      max-width: 100%;
+   }
+   .popup-box .popup-content{
+   	 width: calc(100% - 30px);
+   }
+}
+
