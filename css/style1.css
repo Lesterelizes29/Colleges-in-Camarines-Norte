@@ -233,8 +233,9 @@ section{
 .about .row{
     display: flex;
     align-items: center;
-    background: #954535;
+    background: #803021;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .about .row .image{
