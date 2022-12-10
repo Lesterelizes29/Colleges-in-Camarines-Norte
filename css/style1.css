@@ -251,8 +251,9 @@ section{
 }
 
 .about .row .content h3{
-    font-size: 3rem;
+    font-size: 5rem;
     color: #fff;
+    text-align: center;
 }
 
 .about .row .content p{
@@ -260,7 +261,7 @@ section{
     color: #ccc;
     padding: 1rem 0;
     line-height: 1.8;
-	text-align:justify;
+    text-align: center;
 }
 
 .private .box-container{
