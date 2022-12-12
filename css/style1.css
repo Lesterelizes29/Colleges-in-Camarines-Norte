@@ -427,6 +427,45 @@ section{
     color: var(--black);
 }
 
+.images .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.images .box-container .box{
+    text-align: center;
+    border:var(--border);
+    padding: 2rem;
+}
+
+.images .box-container .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border:var(--border);
+    color: #fff;
+    margin: .3rem;
+}
+
+.images .box-container .box .icons a:hover{
+    background: var(--main-color);
+}
+
+.images .box-container .box .image{
+    padding: 2.5rem 0;
+}
+
+.images .box-container .box .image img{
+    height: 25rem;
+}
+
+.images .box-container .box .content h3{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
 .location .row{
     display: flex;
     background: #954535;
