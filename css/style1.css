@@ -390,41 +390,65 @@ section{
 	outline: none;
 }
 
-.public .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+
+.public .container {
+    perspective: 1000px;
+    height: 50vh;
+    width: 100%;
+    cursor: pointer; 
 }
 
-.public .box-container .box{
-    padding: 5rem;
-    text-align: center;
-    border: var(--border);
-    background: #a23823;
-}
 
-.public .box-container .box img{
-    height: 10rem;
+.public .card{
+    transform-style: preserve-3d;
+    height:100%;
+    width: 310%;
+    transition: 0.5s ease;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
 }
-
-.public .box-container .box h3{
-    color: #fff;
-    font-size: 2.5rem;
-    padding: 1rem 0;
+.public .front,
+.public .back {
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d; 
+    color: #ffffff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    border-radius: 0.10rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    backface-visibility: hidden;
 }
-
-.public .box-container .box .price{
-    color: #fff;
-    font-size: 1.5rem;
-    padding: 2.5rem 0;
+.public .front{
+    background: linear-gradient(to right,#5a0707, #070707);
 }
-
-.public .box-container .box:hover{
-    background: #fff;
+.public .front img{
+    width: 6em;
 }
-
-.public .box-container .box:hover > *{
-    color: var(--black);
+.public .content{
+    transform: translateZ(60px);
+}
+.public .content h3 {
+    font-size: 30px;
+    margin-top: 1;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.public .content p {
+    font-size: 20px;
+    line-height: 1rem;
+    letter-spacing: 0 0.2em;
+    padding: 0.3em;
+}
+.public .back {
+    background-color: rgb(164, 49, 49);
+    transform: rotateX(180deg);
+}
+.public .container:hover .card {
+    transform: rotateX(180deg);
 }
 
 .images .box-container{
@@ -681,3 +705,14 @@ section{
    }
 }
 
+@media screen and (min-width:992px){
+    section {
+        padding: 0 0.5em;
+    }
+    .container {
+        flex-basis: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 0 0.5em;
+    }
+    
+}
